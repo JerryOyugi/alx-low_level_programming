@@ -2,8 +2,9 @@
 
 /**
  * main - test if function gives an output correctly when given a case 0
- * Return: Always 0
+ * Return: 0
  */
+
 int main(void)
 {
 	int i;
