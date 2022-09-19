@@ -4,12 +4,12 @@
 
 /**
  * main - generates random valid passwords
- * Description: Password generator
+ *
  * Return: 0 (success)
  */
 int main(void)
 {
-	int pass, num;
+	int pass, sum;
 
 	srand(time(NULL));
 	sum = 0;
