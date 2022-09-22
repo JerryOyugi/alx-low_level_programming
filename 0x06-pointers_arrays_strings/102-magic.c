@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - Modifies an array element from a pointer to a local variable
- * Return: 0 (success)
- */
 int main(void)
 {
 	int n;
@@ -18,7 +14,7 @@ int main(void)
 	 * - you are not allowed to use a
 	 * - you re not allowed to modify p
 	 * - only one statement
-	 * you are not allowed to code anything else than this line of code...
+	 * - you are not allowed to code anything else than this line of code 
 	 */
 	*(p + 5) = 98;
 	/* ...so that it prints 98\n */
