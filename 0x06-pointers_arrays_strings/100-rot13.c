@@ -4,7 +4,7 @@
  * rot13 - encodes a string into rot13
  * @str: string to encode
  *
- * Return: address of s
+ * Return: address of str
  */
 char *rot13(char *str)
 {
@@ -12,16 +12,16 @@ char *rot13(char *str)
 	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; *(s + i); i++)
+	for (i = 0; *(str + i); i++)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (a[j] == *(s + i))
+			if (a[j] == *(str + i))
 			{
-				*(s + i) = b[j];
+				*(str + i) = b[j];
 				break;
 			}
 		}
 	}
-	return (s);
+	return (str);
 }
