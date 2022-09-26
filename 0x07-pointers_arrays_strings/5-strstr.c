@@ -8,7 +8,7 @@
  *
  * Return: first substring occurene, NULL otherwise
  */
-char *_strstr(char *haystack, *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i, j;
 
