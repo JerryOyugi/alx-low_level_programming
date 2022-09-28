@@ -29,7 +29,7 @@ int pal_checker(char *s, int i, int j)
 		if (i > j / 2)
 			return (1);
 		else
-			return (pal_checker(s, i + 1, j - 1))
+			return (pal_checker(s, i + 1, j - 1));
 	else
 		return (0);
 }
