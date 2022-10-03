@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; argv[i]; i++)
 	{
-		n = strol(argv[i], &ptr, 10);
+		n = strtol(argv[i], &ptr, 10);
 		if (*ptr)
 		{
 			printf("Error\n");
