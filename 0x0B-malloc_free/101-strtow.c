@@ -18,7 +18,7 @@ int wordnos(char *s)
 	{
 		if (s[c] == ' ')
 			flag = 0;
-		els if (flag == 0)
+		else if (flag == 0)
 		{
 			flag = 1;
 			w++;
@@ -55,7 +55,7 @@ char **strtow(char *str)
 			if (c)
 			{
 				end = i;
-				tmp = (char *) maloc((c + 1) * sizeof(char));
+				tmp = (char *) malloc((c + 1) * sizeof(char));
 				if (tmp == NULL)
 					return (NULL);
 				while (start < end)
