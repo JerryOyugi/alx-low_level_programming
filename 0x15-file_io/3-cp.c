@@ -22,17 +22,17 @@ int main(int argc, char **argv)
 	char buffer[1024];
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage:cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprint(STDERR_FIENO, "Error: Can't read from file %s\n" argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n" argv[1]);
 		exit(98);
 	}
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 00664);
 	if (fd_to == -1)
-		dprintf(STDERR_FILENO, "Error: CAn't write to %s\n", argv[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 
 	while ((read_count = read(fd_from, buffer, 1024)) != 0)
 	{
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		write_count = write(fd_to, buffer, read_count);
 		if (write_count == -1 || (write_count != read_count))
 		{
-			dprintfSTDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
